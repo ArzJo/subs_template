@@ -19,14 +19,6 @@ object ThemeFunctions {
         return ORGANIZATION_THEME_SYSTEMS.contains(packageId)
     }
 
-    fun getSelfVerifiedPirateTools(context: Context): Boolean {
-        val pm = context.packageManager
-        val packages = pm.getInstalledApplications(PackageManager.GET_META_DATA)
-        val listOfInstalled = arrayListOf<String>()
-        packages.mapTo(listOfInstalled) { it.packageName }
-        return BLACKLISTED_APPLICATIONS.any { listOfInstalled.contains(it) }
-    }
-
     @Suppress("DEPRECATION")
     @SuppressLint("PackageManagerGetSignatures")
     fun checkApprovedSignature(context: Context, packageName: String): Boolean {

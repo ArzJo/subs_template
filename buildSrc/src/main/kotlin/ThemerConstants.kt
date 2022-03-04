@@ -12,7 +12,6 @@ object ThemerConstants {
     const val APK_SIGNATURE_PRODUCTION = ""
 
     // Piracy library configurations
-    const val ENABLE_APP_BLACKLIST_CHECK = false
     const val ENFORCE_GOOGLE_PLAY_INSTALL = false
 
     // Allow third party substratum builds

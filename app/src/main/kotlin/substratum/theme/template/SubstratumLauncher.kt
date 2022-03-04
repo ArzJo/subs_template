@@ -19,7 +19,6 @@ import substratum.theme.template.AdvancedConstants.SHOW_DIALOG_REPEATEDLY
 import substratum.theme.template.AdvancedConstants.SHOW_LAUNCH_DIALOG
 import substratum.theme.template.ThemeFunctions.checkApprovedSignature
 import substratum.theme.template.ThemeFunctions.getSelfSignature
-import substratum.theme.template.ThemeFunctions.getSelfVerifiedPirateTools
 import substratum.theme.template.ThemeFunctions.isCallingPackageAllowed
 
 /**
@@ -41,11 +40,7 @@ class SubstratumLauncher : Activity() {
     private val receiveKeysIntent = "projekt.substratum.RECEIVE_KEYS"
 
     private val themePiracyCheck by lazy {
-        if (BuildConfig.ENABLE_APP_BLACKLIST_CHECK) {
-            getSelfVerifiedPirateTools(applicationContext)
-        } else {
-            false
-        }
+        false
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

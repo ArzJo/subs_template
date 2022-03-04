@@ -1,7 +1,6 @@
 import ThemerConstants.ALLOW_THIRD_PARTY_SUBSTRATUM_BUILDS
 import ThemerConstants.APK_SIGNATURE_PRODUCTION
 import ThemerConstants.BASE_64_LICENSE_KEY
-import ThemerConstants.ENABLE_APP_BLACKLIST_CHECK
 import ThemerConstants.ENFORCE_GOOGLE_PLAY_INSTALL
 import ThemerConstants.SHOULD_ENCRYPT_ASSETS
 import ThemerConstants.SUPPORTS_THIRD_PARTY_SYSTEMS
@@ -45,7 +44,6 @@ android {
 
         // Themers: DO NOT MODIFY
         buildConfigField("boolean", "SUPPORTS_THIRD_PARTY_SYSTEMS", "$SUPPORTS_THIRD_PARTY_SYSTEMS")
-        buildConfigField("boolean", "ENABLE_APP_BLACKLIST_CHECK", "$ENABLE_APP_BLACKLIST_CHECK")
         buildConfigField("boolean", "ALLOW_THIRD_PARTY_SUBSTRATUM_BUILDS", "$ALLOW_THIRD_PARTY_SUBSTRATUM_BUILDS")
         buildConfigField("byte[]", "DECRYPTION_KEY", secretKey.joinToString(prefix = "{", postfix = "}"))
         buildConfigField("byte[]", "IV_KEY", ivKey.joinToString(prefix = "{", postfix = "}"))
