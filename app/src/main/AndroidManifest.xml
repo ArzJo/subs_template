@@ -12,7 +12,6 @@
         android:required="false" /> <!-- Set to true for OMS-rom only block to be enabled -->
 
     <application
-        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/ThemeName"
         android:supportsRtl="true"
@@ -21,7 +20,8 @@
         tools:ignore="GoogleAppIndexingWarning"
         android:extractNativeLibs="false">
 
-        <activity android:name="substratum.theme.template.SubstratumLauncher">
+        <activity android:name="substratum.theme.template.SubstratumLauncher"
+            android:exported="true">
             <intent-filter>
                 <action android:name="projekt.substratum.THEME"/>
                 <category android:name="android.intent.category.DEFAULT"/>
