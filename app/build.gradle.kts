@@ -28,16 +28,15 @@ val secretKey = generateRandomByteArray()
 val ivKey = generateRandomByteArray()
 
 android {
-    compileSdk = 31
+    compileSdk = 34
 
     defaultConfig {
         // If you're planning to change up the package name, ensure you have read the readme
         // thoroughly!
         applicationId = "substratum.theme.template"
-        targetSdk = 31
-        // We are only supporting Nougat and above, all new changes will incorporate Nougat changes
-        // to the substratum repo rather than anything lower. Keep targetSdkVersion the same.
-        minSdk = 24
+        targetSdk = 34
+        // Support for Android 12+, change it according your needs.
+        minSdk = 31
         // Both versions must be changed to increment on Play Store/user's devices
         versionCode = 2
         versionName = "2.0"
